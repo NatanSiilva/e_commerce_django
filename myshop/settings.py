@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
+import braintree
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'shop',
     'cart',
     'orders',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,26 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CART_SESSION_ID = 'cart'
 
+
+# EMAIL_HOST = 'smtp.gamil.com'
+# EMAIL_HOST_USER = 'natan.progjs@gmail.com'
+# EMAIL_HOST_PASSWORD = 'LuckeyMarley@4i5njhs2'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# Braintree settings
+BRAINTREE_MERCHANT_ID = '4t8xwx23mkw279fx'  # Merchant ID
+BRAINTREE_PUBLIC_KEY = 'kv42ztwbbmvnp6rm'   # Public Key
+BRAINTREE_PRIVATE_KEY = '21d457a07249fe42b03a4eae4f247619'  # Private key
+
+
+BRAINTREE_CONF = braintree.Configuration(
+    braintree.Environment.Sandbox,
+    BRAINTREE_MERCHANT_ID,
+    BRAINTREE_PUBLIC_KEY,
+    BRAINTREE_PRIVATE_KEY
+)
