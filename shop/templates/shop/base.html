@@ -12,7 +12,7 @@
     </div>
     <div id="subheader">
       <div class="cart">
-        {% comment %} {% with total_items=cart|length %}
+        {% with total_items=cart|length %}
           {% if total_items > 0 %}
             Your cart:
             <a href="{% url 'cart:cart_detail' %}">
@@ -22,8 +22,7 @@
           {% else %}
             Your cart is empty.
           {% endif %}
-        {% endwith %} {% endcomment %}
-        you cart
+        {% endwith %}
       </div>
     </div>
     <div id="content">
