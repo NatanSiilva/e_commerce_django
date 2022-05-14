@@ -1,5 +1,4 @@
 from django import forms
-from django.test import override_script_prefix
 
 PRODUCT_QUANTITY_CHOICES = [(i, str(i)) for i in range(1, 21)]
 
