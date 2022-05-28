@@ -110,7 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'America/Sao_Paulo'
+
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
@@ -146,9 +148,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 # Braintree settings
-BRAINTREE_MERCHANT_ID = ''  # Merchant ID
-BRAINTREE_PUBLIC_KEY = ''   # Public Key
-BRAINTREE_PRIVATE_KEY = ''  # Private key
+BRAINTREE_MERCHANT_ID = '4t8xwx23mkw279fx'  # Merchant ID
+BRAINTREE_PUBLIC_KEY = 'kv42ztwbbmvnp6rm'   # Public Key
+BRAINTREE_PRIVATE_KEY = '21d457a07249fe42b03a4eae4f247619'  # Private key
 
 
 BRAINTREE_CONF = braintree.Configuration(
