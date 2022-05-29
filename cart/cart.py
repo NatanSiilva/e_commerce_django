@@ -19,7 +19,7 @@ class Cart(object):
             cart = self.sessions[settings.CART_SESSION_ID] = {}
         self.cart = cart
 
-        self.coupon_id = self.session.get('coupon_id')
+        self.coupon_id = self.sessions.get('coupon_id')
 
 
     def add(self, product, quantity=1, override_quantity=False):
