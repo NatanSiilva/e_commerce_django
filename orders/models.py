@@ -9,7 +9,7 @@ from coupons.models import Coupon
 class Order(models.Model):
     first_name = models.CharField(_('Primeiro Nome'), max_length=50)
     last_name = models.CharField(_('Último Nome'), max_length=50)
-    email = models.EmailField(_('E-mail')),
+    email = models.EmailField(_('e-mail'))
     address = models.CharField(_('Endereço'), max_length=250)
     postal_code = models.CharField(_('CEP'), max_length=20)
     city = models.CharField(_('Cidade'), max_length=100)

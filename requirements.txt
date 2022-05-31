@@ -13,10 +13,12 @@ charset-normalizer==2.0.12
 cssselect2==0.6.0
 defusedxml==0.7.1
 Django==4.0.4
+django-rosetta==0.9.3
 html5lib==1.1
 idna==3.3
 kombu==4.6.11
 Pillow==9.1.0
+polib==1.1.1
 pycodestyle==2.8.0
 pycparser==2.21
 pyphen==0.12.0
